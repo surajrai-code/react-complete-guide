@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import ExpanseItem from './component/ExpanseItem';
-function App() {
+import ExpanseItem from './component/Expnses/ExpanseItem';
+const App=()=>{
       const expanseItem=[
         {
       expanseDate:new Date(2023,2,3),

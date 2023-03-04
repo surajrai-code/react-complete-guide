@@ -1,7 +1,7 @@
 
 import React from "react";
 import Expance from './Expance.js'
-function ExpanseItem(props) {
+const ExpanseItem=(props)=>{
     return (
       
       props.expanseItem.map((expanse,index)=>{
