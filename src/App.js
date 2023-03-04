@@ -4,25 +4,25 @@ import ExpanseItem from './component/ExpanseItem';
 function App() {
       const expanseItem=[
         {
-      expanseDate:'2-3-2023',
+      expanseDate:new Date(2023,2,3),
       expanseTitle:'bike',
       expanseAmount:23400,
       locationOfExpenditure:'patna' 
         },
         {
-          expanseDate:'2-2-2023',
+          expanseDate:new Date(2023,2,2),
           expanseTitle:'car',
           expanseAmount:2347533,
           locationOfExpenditure:'chennai' 
             },
             {
-              expanseDate:'2-6-2023',
+              expanseDate:new Date(2023,2,6),
               expanseTitle:'mobile',
               expanseAmount:23400,
               locationOfExpenditure:'mumbai' 
                 },
                 {
-                  expanseDate:'2-6-2023',
+                  expanseDate:new Date(2023,2,7),
                   expanseTitle:'laptop',
                   expanseAmount:234786,
                   locationOfExpenditure:'Delhi' 
