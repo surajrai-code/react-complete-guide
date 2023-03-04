@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default  ExpanseDetails=(props)=>{
+const ExpanseDetails=(props)=>{
     const title=props.expanseTitle
     const amount=props.expanseAmount
     const location=props.locationOfExpenditure
@@ -14,3 +14,4 @@ export default  ExpanseDetails=(props)=>{
     );
 
 }
+export default  ExpanseDetails;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ExpanseDate=(props)=>{
+  const ExpanseDate=(props)=>{
 
   const month =props.expanseDate.toLocaleString('en-US', { month: 'long' });
   const day = props.expanseDate.toLocaleString('en-US', { day: '2-digit' });
@@ -15,3 +15,4 @@ export default ExpanseDate=(props)=>{
     </div>
   );
 }
+export default ExpanseDate;

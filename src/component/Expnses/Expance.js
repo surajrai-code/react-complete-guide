@@ -1,7 +1,7 @@
 import React from 'react';
 import ExpanseDate from './ExpanseDate';
 import ExpanseDetails from './ExpanseDetails';
-export default  Expance=(props)=>{
+const Expance=(props)=>{
     console.log(props)
     return(
            <div className='expense-item'>
@@ -12,3 +12,4 @@ export default  Expance=(props)=>{
       </div>
     );
 }
+export default  Expance;
