@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import ExpanseItem from './component/Expnses/ExpanseItem';
+import ExpanseItem from './component/Expenses/ExpanseItem';
 const App=()=>{
       const expanseItem=[
         {

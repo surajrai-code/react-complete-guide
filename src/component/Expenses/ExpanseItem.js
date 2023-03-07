@@ -1,6 +1,6 @@
 
 import React from "react";
-import Expance from './Expance.js'
+import Expance from './Expanses.js'
 const ExpanseItem=(props)=>{
     return (
       
