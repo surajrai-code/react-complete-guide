@@ -6,6 +6,10 @@ const Expanses=(props)=>{
  const UpdateAmount=()=>{
     setAmount(100)
  }
+ useState()
+ const DeleteItem=()=>{
+
+ }
     return(
         <div className='expense-item'>
          <ExpanseDate expanseDate={props.expanse.expanseDate}/>
@@ -13,6 +17,7 @@ const Expanses=(props)=>{
           <ExpanseDetails expanseAmount={expanseAmount}/>
           <ExpanseDetails locationOfExpenditure={props.expanse.locationOfExpenditure}/>
           <button onClick={UpdateAmount}>UpdateAmount</button>
+          <button onClick={DeleteItem}>DeleteItem</button>
       </div>
     );
 }

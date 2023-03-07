@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ExpanseItem from './component/Expenses/ExpanseItem';
+import NewExpanse from './component/newExpanse/NewExpanse';
 const App=()=>{
       const expanseItem=[
         {
@@ -34,7 +35,7 @@ const App=()=>{
   ]
           return (
             <div>
-              <h2>Let's get started!</h2>
+              <NewExpanse />
               <ExpanseItem expanseItem={expanseItem} />
             </div>
           );

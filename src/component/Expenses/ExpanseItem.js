@@ -7,6 +7,7 @@ const ExpanseItem=(props)=>{
       props.expanseItem.map((expanse,index)=>{
         return <Expance expanse={expanse} key={index}/>
       })
+      
     );
   }
   
