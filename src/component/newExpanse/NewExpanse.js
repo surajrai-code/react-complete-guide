@@ -1,9 +1,17 @@
 import React from 'react';
 import ExpanseForm from './ExpanseForm';
-const NewExpanse=()=>{
+const NewExpanse=(props)=>{
+    const saveExapnseHandler=(enterData)=>{
+            const expanseData={
+                ...enterData,
+                id: Math.random().toString()
+            };
+            // console.log(expanseData);
+            props.onAddExpanse(expanseData);
+    }
     return(
         <div>
-            <ExpanseForm/>
+            <ExpanseForm onSaveExpanseData={saveExapnseHandler} />
         </div>
     );
 }

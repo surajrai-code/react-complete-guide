@@ -32,10 +32,13 @@ const App=()=>{
                   expanseAmount:234786,
                   locationOfExpenditure:'Delhi' 
                     }
-  ]
+  ];
+             const addExpanseHandler=expanse=>{
+              console.log(expanse);
+             }
           return (
             <div>
-              <NewExpanse />
+              <NewExpanse onAddExpanse={addExpanseHandler}/>
               <ExpanseItem expanseItem={expanseItem} />
             </div>
           );
