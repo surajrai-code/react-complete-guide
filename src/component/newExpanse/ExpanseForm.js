@@ -2,40 +2,36 @@ import React,{useState} from 'react';
 
 
 const ExpanseForm=()=>{
-    // const [amountHandle,setAmountHandel]=useState('')
-    // const [titleHandle,setTitleHandel]=useState('')
-    // const [dateHandle,setDateHandel]=useState('')
-    // const [locationHandle,setLocationHandel]=useState('')
-    const [entreDetails,setEntreDetails]=useState({
-        amountHandle:'',
-        titleHandle:'',
-        dateHandle:'',
-        locationHandle:''
-
-    });
+    const [amountHandle,setAmountHandel]=useState()
+    const [titleHandle,setTitleHandel]=useState('')
+    const [dateHandle,setDateHandel]=useState('')
+    const [locationHandle,setLocationHandel]=useState('')
     const amountHandler=(event)=>{
-        setEntreDetails((prevState)=>{
-            return{...prevState,amountHandle:event.target.value}
-         })
-        
+        setAmountHandel(event.target.value)
     }
     const dateHandler=(event)=>{
-        setEntreDetails((prevState)=>{
-            return{...prevState,dateHandle:event.target.value}
-         })
+        setDateHandel(event.target.value)
     }
     const titleHandler=(event)=>{
-        setEntreDetails((prevState)=>{
-            return{...prevState,titleHandle:event.target.value}
-         })
+        setTitleHandel(event.target.value)
     }
     const locationHandler=(event)=>{
-        setEntreDetails((prevState)=>{
-           return{...prevState,amountHandle:event.target.value}
-        })
+        setLocationHandel(event.target.value)
     }
+    const submitHandler=(event)=>{
+            event.preventDefault();
+            const enterData={
+
+                amount:amountHandle,
+                title:titleHandle,
+                date:new Date(dateHandle),
+                location:locationHandle
+            }
+            console.log(enterData);
+    }
+
     return(
-        <form>
+        <form onSubmit={submitHandler}>
             <div>
                 <div>
                     <label>Amount</label>
