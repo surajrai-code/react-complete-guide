@@ -2,21 +2,37 @@ import React,{useState} from 'react';
 
 
 const ExpanseForm=()=>{
-    const [amountHandle,setAmountHandel]=useState('')
-    const [titleHandle,setTitleHandel]=useState('')
-    const [dateHandle,setDateHandel]=useState('')
-    const [locationHandle,setLocationHandel]=useState('')
+    // const [amountHandle,setAmountHandel]=useState('')
+    // const [titleHandle,setTitleHandel]=useState('')
+    // const [dateHandle,setDateHandel]=useState('')
+    // const [locationHandle,setLocationHandel]=useState('')
+    const [entreDetails,setEntreDetails]=useState({
+        amountHandle:'',
+        titleHandle:'',
+        dateHandle:'',
+        locationHandle:''
+
+    });
     const amountHandler=(event)=>{
-        setAmountHandel(event.target.value)
+        setEntreDetails((prevState)=>{
+            return{...prevState,amountHandle:event.target.value}
+         })
+        
     }
     const dateHandler=(event)=>{
-        setDateHandel(event.target.value)
+        setEntreDetails((prevState)=>{
+            return{...prevState,dateHandle:event.target.value}
+         })
     }
     const titleHandler=(event)=>{
-        setTitleHandel(event.target.value)
+        setEntreDetails((prevState)=>{
+            return{...prevState,titleHandle:event.target.value}
+         })
     }
     const locationHandler=(event)=>{
-        setLocationHandel(event.target.value)
+        setEntreDetails((prevState)=>{
+           return{...prevState,amountHandle:event.target.value}
+        })
     }
     return(
         <form>
