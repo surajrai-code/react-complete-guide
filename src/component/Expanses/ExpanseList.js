@@ -10,7 +10,9 @@ const ExpanseList = (props) => {
   return (
     <ol className='expenses-list'>
        {props.Dummydata.map((expanses)=>
-          <ExpanseItem date={expanses.date}
+          <ExpanseItem 
+          key={expanses.id}
+          date={expanses.date}
             amount={expanses.amount}
             title={expanses.title}
             location={expanses.locationOfExpenditure}

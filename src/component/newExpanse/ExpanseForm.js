@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
-
+import './ExpanseForm.css'
 const ExpanseForm=(props)=>{
     const [amountHandle,setAmountHandel]=useState()
     const [titleHandle,setTitleHandel]=useState('')
@@ -38,26 +38,29 @@ const ExpanseForm=(props)=>{
 
     return(
         <form onSubmit={submitHandler}>
-            <div>
-                <div>
+            
+                
+                <div className='new-expense__controls'>
+                 <div className='new-expense__control'>
                     <label>Amount</label>
                     <input type='number' 
                     value={amountHandle}
                     onChange={amountHandler}/>
                 </div>
-                <div>
+                <div className='new-expense__control'>
                     <label>title</label>
                     <input type='text' value={titleHandle} onChange={titleHandler}/>
                 </div>
-                <div>
+                <div className='new-expense__control'>
                     <label>location</label>
                     <input type='text' value={locationHandle} onChange={locationHandler}/>
                 </div>
-                <div>
+                <div className='new-expense__control'>
                     <label>date</label>
                     <input type='date' value={dateHandle} onChange={dateHandler}/>
                 </div>
-                <div>
+                <div className='new-expense__actions'>
+                <button type="button" onClick={props.onCancel}>Cancel</button>
                     <button type='submit'>Add new Item</button>
                 </div>
             </div>
