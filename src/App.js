@@ -1,53 +1,53 @@
 import logo from './logo.svg';
 import React from 'react';
-
+import Expanses from './component/Expanses/Expanses';
 import './App.css';
-import ExpanseItem from './component/Expenses/ExpanseItem';
+// import ExpanseItem from './component/Expenses/ExpanseItem';
 import NewExpanse from './component/newExpanse/NewExpanse';
 
       const Dummydata=[
         {
           id: 'a',
-      expanseDate:new Date(2023,2,3),
-      expanseTitle:'bike',
-      expanseAmount:23400,
+      date:new Date(2023,2,3),
+      title:'bike',
+      amount:23400,
       locationOfExpenditure:'patna' 
         },
         {
           id: 'b',         
-           expanseDate:new Date(2023,2,2),
-          expanseTitle:'car',
-          expanseAmount:2347533,
+           date:new Date(2023,2,2),
+          title:'car',
+          amount:2347533,
           locationOfExpenditure:'chennai' 
             },
             {
               id:'c',
-              expanseDate:new Date(2023,2,6),
-              expanseTitle:'mobile',
-              expanseAmount:23400,
+              date:new Date(2023,2,6),
+              title:'mobile',
+              amount:23400,
               locationOfExpenditure:'mumbai' 
                 },
                 {
                   id:'d',
-                  expanseDate:new Date(2023,2,7),
-                  expanseTitle:'laptop',
-                  expanseAmount:234786,
+                  date:new Date(2023,2,7),
+                  title:'laptop',
+                  amount:234786,
                   locationOfExpenditure:'Delhi' 
                     }
   ];
   const App=()=>{
-    const [expanseItem,setExpanseItem]=React.useState(Dummydata)
+    const [expanses,setExpanseItem]=React.useState(Dummydata)
   
-             const addExpanseHandler=expanseItem=>{
-              setExpanseItem((prevExpanseItem)=>{
-                return([expanseItem,...prevExpanseItem]);
+             const addExpanseHandler=expanse=>{
+              setExpanseItem((prevExpanse)=>{
+                return([expanse,...prevExpanse]);
               })
              }
   
           return (
             <div>
               <NewExpanse onAddExpanse={addExpanseHandler}/>
-              <ExpanseItem Dummydata={Dummydata} />
+              <Expanses Dummydata={expanses} />
             </div>
           );
   }

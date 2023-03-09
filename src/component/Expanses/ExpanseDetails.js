@@ -1,8 +1,8 @@
 import React from 'react';
 import './ExpanseDetails.css'
 const ExpanseDetails=(props)=>{
-    const title=props.expanseTitle
-    const amount=props.expanseAmount
+    const title=props.title
+    const amount=props.amount
     const location=props.locationOfExpenditure
     
     return(

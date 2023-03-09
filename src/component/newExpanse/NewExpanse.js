@@ -5,8 +5,8 @@ const NewExpanse=(props)=>{
             const expanseData={
                 ...enterData,
                 id: Math.random().toString()
-            };
-            // console.log(expanseData);
+            }
+            
             props.onAddExpanse(expanseData);
     }
     return(
