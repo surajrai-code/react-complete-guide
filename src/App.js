@@ -1,9 +1,11 @@
 import logo from './logo.svg';
+import React from 'react';
+
 import './App.css';
 import ExpanseItem from './component/Expenses/ExpanseItem';
 import NewExpanse from './component/newExpanse/NewExpanse';
-const App=()=>{
-      const expanseItem=[
+
+      const Dummydata=[
         {
           id: 'a',
       expanseDate:new Date(2023,2,3),
@@ -33,13 +35,19 @@ const App=()=>{
                   locationOfExpenditure:'Delhi' 
                     }
   ];
-             const addExpanseHandler=expanse=>{
-              console.log(expanse);
+  const App=()=>{
+    const [expanseItem,setExpanseItem]=React.useState(Dummydata)
+  
+             const addExpanseHandler=expanseItem=>{
+              setExpanseItem((prevExpanseItem)=>{
+                return([expanseItem,...prevExpanseItem]);
+              })
              }
+  
           return (
             <div>
               <NewExpanse onAddExpanse={addExpanseHandler}/>
-              <ExpanseItem expanseItem={expanseItem} />
+              <ExpanseItem Dummydata={Dummydata} />
             </div>
           );
   }
