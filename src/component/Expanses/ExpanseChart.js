@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Chart from '../Chart/Chart';
 const ExpanseChart = (props) => {
     const chartDataPoints = [
       { label: 'Jan', value: 0 },
@@ -19,6 +21,7 @@ const ExpanseChart = (props) => {
       const expanseMonth = expanse.date.getMonth(); 
       chartDataPoints[expanseMonth].value += expanse.amount;
     }
+    return <Chart dataPoints={chartDataPoints} />;
   };
   
   export default ExpanseChart;
